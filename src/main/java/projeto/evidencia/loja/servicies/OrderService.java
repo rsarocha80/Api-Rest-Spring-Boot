@@ -39,6 +39,7 @@ public class OrderService {
 		OrderDTO dto = new OrderDTO();
 		dto.setId(order.getId());
 		dto.setMoment(order.getMoment());
+		dto.setOrderStatus(order.getOrderStatus());
 		dto.setClient(order.getClient());
 		return dto;
 	}

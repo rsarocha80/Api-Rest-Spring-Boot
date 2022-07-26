@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 import projeto.evidencia.loja.entities.User;
+import projeto.evidencia.loja.entities.enums.OrderStatus;
 
 public class OrderDTO implements Serializable {
 
@@ -12,6 +13,8 @@ public class OrderDTO implements Serializable {
 	private Long id;
 
 	private Instant moment;
+
+	private OrderStatus orderStatus;
 
 	private User client;
 
@@ -32,6 +35,14 @@ public class OrderDTO implements Serializable {
 
 	public void setMoment(Instant moment) {
 		this.moment = moment;
+	}
+
+	public OrderStatus getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus;
 	}
 
 	public User getClient() {
