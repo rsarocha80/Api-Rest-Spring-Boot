@@ -27,6 +27,11 @@ public class UserServices {
 
 	}
 
+	public UserDTO findById(Long id) {
+		User user = repository.findById(id).get();
+		return converterEntityForDTO(user);
+	}
+
 	// conversores
 
 	public UserDTO converterEntityForDTO(User user) {
